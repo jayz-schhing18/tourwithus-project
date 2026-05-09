@@ -15,7 +15,7 @@
     <nav class="bg-white dark:bg-gray-900 border-b border-transparent dark:border-gray-700">
         <div class="my-1 py-3 ">
             <div>
-                <div class="flex mx-40 justify-between">
+                <div class="flex mx-4 md:mx-16 lg:mx-40 justify-between items-center">
 
                     <div>
                         <a href="./index.html">
@@ -71,7 +71,7 @@
                         <!-- Signup Modal -->
                         <div id="signupModal"
                             class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-[100]">
-                            <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl w-96 shadow-2xl">
+                            <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl w-11/12 sm:w-96 shadow-2xl">
                                 <h2 class="text-2xl font-bold mb-2 dark:text-white">Join TourWithus</h2>
                                 <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Create an account to manage your bookings.</p>
                                 <div class="space-y-4">
@@ -93,11 +93,26 @@
                             </div>
                         </div>
 
+
+            <!-- Hamburger Button -->
+            <button onclick="toggleMobileMenu()" class="md:hidden flex flex-col justify-center gap-1.5 p-2 cursor-pointer" aria-label="Toggle menu">
+              <span class="block w-6 h-0.5 bg-gray-800 dark:bg-gray-100"></span>
+              <span class="block w-6 h-0.5 bg-gray-800 dark:bg-gray-100"></span>
+              <span class="block w-6 h-0.5 bg-gray-800 dark:bg-gray-100"></span>
+            </button>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
+    
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 px-4 py-3 space-y-1">
+    <a href="./hotdeals.html" class="block px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200">Hot deals</a>
+    <a href="./contactus.html" class="block px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200">Contact</a>
+    <a href="./aboutus.html" class="block px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200">About Us</a>
+    <a href="./booknow.html" class="block px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200">Book now</a>
+  </div>
+</nav>
 
     <header>
         <!-- Search bar for hotdeals -->
@@ -128,10 +143,10 @@
 
     </header>
     <!-- main -->
-    <main class="mx-40 my-10">
+    <main class="mx-4 md:mx-16 lg:mx-40 my-10">
         <!-- Section 1 -->
         <h1 class="text-2xl font-bold mt-2 dark:text-white">Hot hotel deals right now</h1>
-        <section class="grid grid-cols-4  gap-6 mt-5">
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-6 mt-5">
 
             <!-- card 1 -->
             <a href="https://www.expedia.com/Sihanoukville-Hotels-Koh-Rong-Hill-Beach-Resort.h21469844.Hotel-Information?chkin=2026-04-17&chkout=2026-04-18&x_pwa=1&rfrr=HSR&pwa_ts=1775469286727&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=6191569&destination=Koh+Rong%2C+Preah+Sihanouk%2C+Cambodia&destType=MARKET&latLong=10.72909%2C103.231725&sort=RECOMMENDED&top_dp=74&top_cur=USD&semcid=US.UB.GOOGLE.DT-c-EN.HOTEL&semdtl=a114081197409.b1128090451569.g1kwd-27394997028.e1c.m1Cj0KCQjwp7jOBhDGARIsABe7C4ckTyVHP9JFxaSxsN2nzRvufZG7JEbEeVcHSPxh0EX0XrJT6DRYqb4aAr__EALw_wcB.r16791a3bc543a89c0211d04dba8096df3d2eda17580c6f48eb61d9d89d12e34c4.c1.j19198350.k1.d1536482555673.h1e.i1.l1.n1.o1.p1.q1.s1koh+rong+hotels.t1.x1.f1.u1.v1.w1&userIntent=&selectedRoomType=325923902&selectedRatePlan=399631267&categorySearch=any_option&searchId=0ee78535-fe83-4bea-8c03-0d99a38c956c"
@@ -659,7 +674,7 @@
         <!-- Main footer content -->
         <div class="relative max-w-7xl mx-auto px-6 py-16 sm:py-10 lg:px-4">
             <!-- Grid layout -->
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
                 <!-- Logo/Name section with interactive effect -->
                 <div class="group">
                     <div class="flex items-center space-x-2 mb-6">
@@ -992,6 +1007,13 @@
         }
     });
     </script>
+
+  <script>
+    function toggleMobileMenu() {
+      var menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
 </body>
 
 </html>

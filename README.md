@@ -47,4 +47,4 @@ Add a screenshot or a GIF of your "Golden Star" style dashboard or the hotel gal
 👥 Our Team
 Lead Developer/Designer: [SONG CHINGSEAN]
 
-Collaborators: Sovann Sitheang, Chanra Bunreach, Ren Sovannara, Heng Sokman
+Collaborators: Sovann Sitheang, Ren Sovannara, Heng Sokman

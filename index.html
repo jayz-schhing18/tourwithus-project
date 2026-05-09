@@ -15,11 +15,11 @@
     <nav class="bg-white dark:bg-gray-900 border-b border-transparent dark:border-gray-700">
         <div class="my-1 py-3 ">
             <div>
-                <div class="flex mx-40 justify-between">
+                <div class="flex mx-4 md:mx-16 lg:mx-40 justify-between items-center">
 
                     <div >
                         <a href="./index.html">
-                            <h1 class="font-extrabold text-5xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-600 to-cyan-400 drop-shadow-sm">
+                            <h1 class="font-extrabold text-2xl sm:text-4xl lg:text-5xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-600 to-cyan-400 drop-shadow-sm">
                                 TourWithUs
                             </h1>
                         </a>
@@ -75,7 +75,7 @@
                         <!-- Signup Modal -->
                         <div id="signupModal"
                             class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-[100]">
-                            <div class="bg-white p-8 rounded-2xl w-96 shadow-2xl">
+                            <div class="bg-white p-8 rounded-2xl w-11/12 sm:w-96 shadow-2xl">
                                 <h2 class="dark:text-white text-2xl font-bold mb-2">Join TourWithus</h2>
                                 <p class="dark:text-gray-400 text-sm text-gray-500 mb-6">Create an account to manage your bookings.</p>
                                 <div class="space-y-4">
@@ -97,15 +97,30 @@
                             </div>
                         </div>
 
+
+            <!-- Hamburger Button -->
+            <button onclick="toggleMobileMenu()" class="md:hidden flex flex-col justify-center gap-1.5 p-2 cursor-pointer" aria-label="Toggle menu">
+              <span class="block w-6 h-0.5 bg-gray-800 dark:bg-gray-100"></span>
+              <span class="block w-6 h-0.5 bg-gray-800 dark:bg-gray-100"></span>
+              <span class="block w-6 h-0.5 bg-gray-800 dark:bg-gray-100"></span>
+            </button>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
+    
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 px-4 py-3 space-y-1">
+    <a href="./hotdeals.html" class="block px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200">Hot deals</a>
+    <a href="./contactus.html" class="block px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200">Contact</a>
+    <a href="./aboutus.html" class="block px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200">About Us</a>
+    <a href="./booknow.html" class="block px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200">Book now</a>
+  </div>
+</nav>
 
     <!-- header -->
     <header class="dark:bg-gray-800 bg-gray-50 py-10">
-        <div class="mx-40">
+        <div class="mx-4 md:mx-16 lg:mx-40 px-2">
           
 <div>
     <h1 class="dark:text-white font-extrabold text-4xl text-gray-900">
@@ -154,11 +169,11 @@
     </header>
 
     <!-- main -->
-    <main class="mx-40 py-2 ">
+    <main class="mx-4 md:mx-16 lg:mx-40 py-2 ">
 
         <!-- Section 1-->
         <h1 class="dark:bg-gray-900 text-2xl font-bold mt-10">All Stays</h1>
-        <section class="dark:text-white grid grid-cols-2 mt-5 gap-6">
+        <section class="dark:text-white grid grid-cols-1 md:grid-cols-2 mt-5 gap-6">
             <!-- card1 -->
             <a href="https://www.booking.com/hotel/kh/long-set-resort-koh-rong-island.html?aid=340295&label=metatrivago-hotel-13025181_xqdz-def_los-1_nrm-1_gstadt-2_gstkid-0_curr-usd_lang-en-us_mcid-50_dev-dsk_losb-1_bw-6_bwb-5_pg-0_dd-0_gsb-2_sl-0_g-0_tstar-0_trat-0_tprc-0_tamnt-0_cod-1777424555_trvref-a8a6a544-e206-3f8a-900b-149553493a7a_tamnt-0&sid=e9549b169602d7241b67937a562ad8e7&all_sr_blocks=172834708_91299691_2_1_0_108897&checkin=2026-05-07&checkout=2026-05-08&dest_id=1728347&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=172834708_91299691_2_1_0_108897&hpos=1&matching_block_id=172834708_91299691_2_1_0_108897&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=172834708_91299691_2_1_0_108897_15800&srepoch=1778127407&srpvid=ddbe1e13bea40f14&type=total&ucfs=1&"
                 target="_blank">
@@ -739,7 +754,7 @@
         <!-- Main footer content -->
         <div class="relative max-w-7xl mx-auto px-6 py-16 sm:py-10 lg:px-4">
             <!-- Grid layout -->
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
                 <!-- Logo/Name section with interactive effect -->
                 <div class="group">
                     <div class="flex items-center space-x-2 mb-6">
@@ -1071,6 +1086,13 @@
                       
                         </script>
 
+
+  <script>
+    function toggleMobileMenu() {
+      var menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
 </body>
 
 </html>

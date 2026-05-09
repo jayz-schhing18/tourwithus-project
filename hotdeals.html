@@ -9,18 +9,19 @@
     <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
 </head>
 
-<body>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    
     <!-- navigation -->
-    <nav>
+    <nav class="bg-white dark:bg-gray-900 border-b border-transparent dark:border-gray-700">
         <div class="my-1 py-3 ">
             <div>
                 <div class="flex mx-40 justify-between">
 
                     <div>
                         <a href="./index.html">
-                            <h1 class="font-extrabold text-4xl text-blue-800 underline ">
-                                TourWithUs
-                            </h1>
+                           <h1 class="font-extrabold text-5xl uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400">
+                            🔥 Hot Deals
+                        </h1>
                         </a>
 
                     </div>
@@ -29,12 +30,12 @@
 
                         <div class="hidden md:flex md:items-center md:justify-center md:gap-5 ">
 
-                            <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium  transition-all duration-400 hover:bg-black hover:text-white"
+                            <a class="dark:text-gray-200 dark:hover:bg-gray-700 inline-block rounded-lg px-2 py-1 text-sm font-medium transition-all duration-400 hover:bg-black hover:text-white"
                                 href="./hotdeals.html">Hot deals</a>
-                            <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium  transition-all duration-400 hover:bg-black hover:text-white"
+                            <a class="dark:text-gray-200 dark:hover:bg-gray-700 inline-block rounded-lg px-2 py-1 text-sm font-medium transition-all duration-400 hover:bg-black hover:text-white"
                                 href="./contactus.html">Contact</a>
-                            <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium  transition-all duration-400 hover:bg-black hover:text-white"
-                                href="./aboutus.html">About</a>
+                            <a class="dark:text-gray-200 dark:hover:bg-gray-700 inline-block rounded-lg px-2 py-1 text-sm font-medium transition-all duration-400 hover:bg-black hover:text-white"
+                                href="./aboutus.html">About Us</a>
                         </div>
 
                         <a class="hidden items-center justify-center rounded-xl bg-white text-sm px-4 py-2 gap-1 font-semibold shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-black hover:text-white sm:inline-flex group"
@@ -49,7 +50,7 @@
 
                         <!-- Sign up -->
                         <div id="navAction"
-                            class=" justify-center rounded-xl bg-white text-sm px-4 py-2 font-semibold shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-black hover:text-white sm:inline-flex group">
+                            class="dark:bg-gray-800 dark:text-gray-100 dark:ring-gray-600 justify-center rounded-xl bg-white text-sm px-4 py-2 font-semibold shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-black hover:text-white sm:inline-flex group">
                             <!-- Sign Up Button -->
 
                             <button onclick="toggleModal()" class="flex gap-1 cursor-pointer">
@@ -60,19 +61,26 @@
                                 </svg>Sign up
                             </button>
                         </div>
+                          <!-- DarkMode&LightMode Toggle -->
+                    <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all">
+                    <span id="theme-toggle-dark-icon" class="text-xl">🌙</span>
+                    <span id="theme-toggle-light-icon" class="hidden text-xl">☀️</span>
+                </button>
+                    </div>
                         <!-- Signup Modal -->
                         <div id="signupModal"
                             class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-[100]">
-                            <div class="bg-white p-8 rounded-2xl w-96 shadow-2xl">
-                                <h2 class="text-2xl font-bold mb-2">Join TourWithus</h2>
-                                <p class="text-sm text-gray-500 mb-6">Create an account to manage your bookings.</p>
+                            <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl w-96 shadow-2xl">
+                                <h2 class="text-2xl font-bold mb-2 dark:text-white">Join TourWithus</h2>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Create an account to manage your bookings.</p>
                                 <div class="space-y-4">
                                     <input id="name" type="text" placeholder="Full Name"
-                                        class="border p-3 w-full rounded-lg outline-blue-500">
+                                        class="border dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 p-3 w-full rounded-lg outline-blue-500">
                                     <input id="email" type="email" placeholder="Email"
-                                        class="border p-3 w-full rounded-lg outline-blue-500">
+                                        class="border dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 p-3 w-full rounded-lg outline-blue-500">
                                     <input id="password" type="password" placeholder="Password"
-                                        class="border p-3 w-full rounded-lg outline-blue-500">
+                                        class="border dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 p-3 w-full rounded-lg outline-blue-500">
                                     <button onclick="signupUser()"
                                         class="bg-blue-600 hover:bg-blue-700 text-white w-full py-3 rounded-lg font-bold transition cursor-pointer">
                                         Create Account
@@ -85,63 +93,51 @@
                             </div>
                         </div>
 
-                        <script>
-                            const modal = document.getElementById('signupModal');
-
-                            // Toggle Modal visibility
-                            function toggleModal() {
-                                if (modal.classList.contains('hidden')) {
-                                    modal.classList.remove('hidden');
-                                    modal.classList.add('flex');
-                                } else {
-                                    modal.classList.add('hidden');
-                                    modal.classList.remove('flex');
-                                }
-                            }
-
-                            // Handle Hotel Booking Selection
-                            function bookHotel(hotelName) {
-                                const info = document.getElementById('bookingInfo');
-                                info.innerText = "Selected: " + hotelName;
-                                info.classList.remove('italic', 'text-gray-600');
-                                info.classList.add('font-bold', 'text-blue-700');
-                            }
-
-                            // Handle Signup
-                            function signupUser() {
-                                const name = document.getElementById('name').value;
-                                if (name.trim() !== "") {
-                                    alert("Registration successful for " + name);
-                                    toggleModal();
-                                } else {
-                                    alert("Please enter your name.");
-                                }
-                            }
-
-                            // Close modal when clicking outside of it
-                            window.onclick = function (event) {
-                                if (event.target == modal) {
-                                    toggleModal();
-                                }
-                            }
-                        </script>
-
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
+    <header>
+        <!-- Search bar for hotdeals -->
+        <div class="relative w-full max-w-4xl mx-auto px-4">
+    <!-- Main Search Bar -->
+    <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg mt-10">
+        <div class="flex items-center px-4 py-3">
+            <!--Original SVG -->
+            <svg class="w-5 h-5 text-gray-500 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+            </svg>
+            <div class="flex flex-col w-full">
+                <p class="text-sm text-gray-500">Hotels</p>
+                <input 
+                    type="text" 
+                    id="hotelSearchInput" 
+                    placeholder="Where to?" 
+                    autocomplete="off"
+                    class="font-semibold outline-none bg-transparent placeholder-gray-700 dark:placeholder-gray-300 text-black dark:text-white w-full"
+                >
+            </div>
+        </div>
+    </div>
+
+    <ul id="suggestionDropdown" class="hidden absolute left-4 right-4 mt-1 bg-white dark:bg-gray-800 shadow-xl rounded-lg border border-gray-100 dark:border-gray-700 overflow-hidden z-50">
+    </ul>
+</div>
+
+    </header>
     <!-- main -->
     <main class="mx-40 my-10">
         <!-- Section 1 -->
-        <h1 class="text-2xl font-bold mt-2">Hot hotel deals right now</h1>
+        <h1 class="text-2xl font-bold mt-2 dark:text-white">Hot hotel deals right now</h1>
         <section class="grid grid-cols-4  gap-6 mt-5">
 
             <!-- card 1 -->
             <a href="https://www.expedia.com/Sihanoukville-Hotels-Koh-Rong-Hill-Beach-Resort.h21469844.Hotel-Information?chkin=2026-04-17&chkout=2026-04-18&x_pwa=1&rfrr=HSR&pwa_ts=1775469286727&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=6191569&destination=Koh+Rong%2C+Preah+Sihanouk%2C+Cambodia&destType=MARKET&latLong=10.72909%2C103.231725&sort=RECOMMENDED&top_dp=74&top_cur=USD&semcid=US.UB.GOOGLE.DT-c-EN.HOTEL&semdtl=a114081197409.b1128090451569.g1kwd-27394997028.e1c.m1Cj0KCQjwp7jOBhDGARIsABe7C4ckTyVHP9JFxaSxsN2nzRvufZG7JEbEeVcHSPxh0EX0XrJT6DRYqb4aAr__EALw_wcB.r16791a3bc543a89c0211d04dba8096df3d2eda17580c6f48eb61d9d89d12e34c4.c1.j19198350.k1.d1536482555673.h1e.i1.l1.n1.o1.p1.q1.s1koh+rong+hotels.t1.x1.f1.u1.v1.w1&userIntent=&selectedRoomType=325923902&selectedRatePlan=399631267&categorySearch=any_option&searchId=0ee78535-fe83-4bea-8c03-0d99a38c956c"
                 target="_blank">
 
-                <div class=" shadow-2xl rounded-2xl cursor-pointer overflow-hidden group ">
+                <div class="shadow-2xl rounded-2xl cursor-pointer overflow-hidden group bg-white dark:bg-gray-800">
                     <div class="h-64 overflow-hidden">
                         <img src="https://images.trvl-media.com/lodging/22000000/21470000/21469900/21469844/446d9b49.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill"
                             alt="Koh Rong Hill Beach Resort"
@@ -168,7 +164,7 @@
                             <h1 class="text-[18px] font-bold">$74 total</h1>
                         </div>
                         <div>
-                            <h1 class="text-[13px] text-gray-600">Total with taxes and fees</h1>
+                            <h1 class="text-[13px] text-gray-600 dark:text-gray-400">Total with taxes and fees</h1>
                         </div>
                         <div class="flex gap-1">
 
@@ -200,7 +196,7 @@
             <a href="https://www.expedia.com/Koh-Rong-Hotels-Royal-C-Beach-Resort.h124040968.Hotel-Information?chkin=2026-05-15&chkout=2026-05-16&x_pwa=1&rfrr=HSR&pwa_ts=1778202258236&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=6191569&destination=Koh+Rong%2C+Preah+Sihanouk%2C+Cambodia&destType=MARKET&selected=124040968&latLong=10.72909%2C103.231725&sort=RECOMMENDED&top_dp=96&top_cur=USD&userIntent=&selectedRoomType=327852615&selectedRatePlan=406535552&categorySearch=any_option&searchId=4cf61487-3905-4129-9a0d-5319bb7e9dce"
                 target="_blank">
 
-                <div class=" shadow-2xl rounded-2xl cursor-pointer overflow-hidden group ">
+                <div class="shadow-2xl rounded-2xl cursor-pointer overflow-hidden group bg-white dark:bg-gray-800">
 
                     <div class="h-64 overflow-hidden">
                         <img src="https://images.trvl-media.com/lodging/125000000/124050000/124041000/124040968/5ee73db6.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill"
@@ -228,7 +224,7 @@
                             <h1 class="text-[18px] font-bold">$126 total</h1>
                         </div>
                         <div>
-                            <h1 class="text-[13px] text-gray-600">Total with taxes and fees</h1>
+                            <h1 class="text-[13px] text-gray-600 dark:text-gray-400">Total with taxes and fees</h1>
                         </div>
                         <div class="flex gap-1">
 
@@ -265,7 +261,7 @@
             <a href="https://www.booking.com/hotel/kh/white-sand-ark-resort.html?aid=340295&label=metatrivago-hotel-4619744_xqdz-def_los-1_nrm-1_gstadt-2_gstkid-0_curr-usd_lang-en-us_mcid-50_dev-dsk_losb-1_bw-23_bwb-15_pg-0_dd-0_gsb-2_sl-0_g-0_tstar-0_trat-0_tprc-0_tamnt-0_cod-1778143482_trvref-01ddd057-28f1-3e0f-8cf3-69a9005249b8_tamnt-0&sid=e9549b169602d7241b67937a562ad8e7&all_sr_blocks=899806409_0_2_1_0&checkin=2026-05-30&checkout=2026-05-31&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=899806409_0_2_1_0&hpos=1&matching_block_id=899806409_0_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=distance_from_search&sr_pri_blocks=899806409_0_2_1_0__9334&srepoch=1778202394&srpvid=98f907c91f9a0823&type=total&ucfs=1&"
                 target="_blank">
 
-                <div class=" shadow-2xl rounded-2xl cursor-pointer overflow-hidden group ">
+                <div class="shadow-2xl rounded-2xl cursor-pointer overflow-hidden group bg-white dark:bg-gray-800">
 
                     <div class="h-64 overflow-hidden">
                         <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/833925811.jpg?k=287d9cbacb4cb1bb39ddf478959a5ae8a6ea9de8d2260b5e2519e326ff6fa101&o="
@@ -293,7 +289,7 @@
                             <h1 class="text-[18px] font-bold">$102 total</h1>
                         </div>
                         <div>
-                            <h1 class="text-[13px] text-gray-600">Total with taxes and fees</h1>
+                            <h1 class="text-[13px] text-gray-600 dark:text-gray-400">Total with taxes and fees</h1>
                         </div>
                         <div class="flex gap-1">
 
@@ -331,7 +327,7 @@
             <a href="https://accommodation.edreams.net/Koh-Rong-Hotels-Golden-Beach-Resort.h105631038.Hotel-Information?chkin=2026-05-30&chkout=2026-05-31&x_pwa=1&rfrr=HSR&pwa_ts=1778202451363&referrerUrl=aHR0cHM6Ly9hY2NvbW1vZGF0aW9uLmVkcmVhbXMubmV0L0hvdGVsLVNlYXJjaA%3D%3D&rffrid=h4p.hcom.US.odigeo.000.000.kwrd%3Db1e9e54c-e651-3ef8-bc4c-28de5448d43e&useRewards=false&rm1=a2&regionId=6191569&destination=Koh+Rong%2C+Preah+Sihanouk%2C+Cambodia&destType=MARKET&selected=105631038&latLong=10.72909%2C103.231725&mpo=EC&sort=RECOMMENDED&top_dp=129&top_cur=USD&mctc=10&userIntent=&selectedRoomType=324874023&selectedRatePlan=396067283&searchId=bec47807-e158-4338-a50a-cdebcaaf4347"
                 target="_blank">
 
-                <div class=" shadow-2xl rounded-2xl cursor-pointer overflow-hidden group ">
+                <div class="shadow-2xl rounded-2xl cursor-pointer overflow-hidden group bg-white dark:bg-gray-800">
 
                     <div class="h-64 overflow-hidden">
                         <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/628232240.jpg?k=de9ad08f0ea8fa4609ca070fe0224d900de7f8679fef1c3facc1186b57f2cdae&o="
@@ -359,7 +355,7 @@
                             <h1 class="text-[18px] font-bold">$234 total</h1>
                         </div>
                         <div>
-                            <h1 class="text-[13px] text-gray-600">Total with taxes and fees</h1>
+                            <h1 class="text-[13px] text-gray-600 dark:text-gray-400">Total with taxes and fees</h1>
                         </div>
                         <div class="flex gap-1">
 
@@ -400,9 +396,9 @@
             </a>
 
             <!-- card 5 -->
-            <a href="https://www.booking.com/hotel/kh/sabay-koh-rong.html" target="_blank">
+            <a  href="https://www.booking.com/hotel/kh/sabay-koh-rong.html" target="_blank">
 
-                <div class=" shadow-2xl rounded-2xl cursor-pointer overflow-hidden group ">
+                <div class="shadow-2xl rounded-2xl cursor-pointer overflow-hidden group bg-white dark:bg-gray-800">
                     <div class="h-64 overflow-hidden">
                         <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/850991951.jpg?k=eb05801cd09cce95fe5fe4dfe022b686099173a7c64fd3d0c57bfd74d97fe593&o="
                             alt="Sabay Koh Rong"
@@ -429,7 +425,7 @@
                             <h1 class="text-[18px] font-bold">$51 total</h1>
                         </div>
                         <div>
-                            <h1 class="text-[13px] text-gray-600">Total with taxes and fees</h1>
+                            <h1 class="text-[13px] text-gray-600 dark:text-gray-400">Total with taxes and fees</h1>
                         </div>
                         <div class="flex gap-1">
 
@@ -461,7 +457,7 @@
             <a href="https://www.booking.com/hotel/kh/gecko-guesthouse.html?aid=340295&label=metatrivago-hotel-4619744_xqdz-def_los-1_nrm-1_gstadt-2_gstkid-0_curr-usd_lang-en-us_mcid-50_dev-dsk_losb-1_bw-23_bwb-15_pg-0_dd-0_gsb-2_sl-0_g-0_tstar-0_trat-0_tprc-0_tamnt-0_cod-1778143482_trvref-01ddd057-28f1-3e0f-8cf3-69a9005249b8_tamnt-0&sid=e9549b169602d7241b67937a562ad8e7&all_sr_blocks=1530942401_424620090_2_0_0&checkin=2026-05-30&checkout=2026-05-31&dist=0&group_adults=2&group_children=0&hapos=8&highlighted_blocks=1530942401_424620090_2_0_0&hpos=8&matching_block_id=1530942401_424620090_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=distance_from_search&sr_pri_blocks=1530942401_424620090_2_0_0__1116&srepoch=1778211489&srpvid=ac5a1818e5f900ca&type=total&ucfs=1&"
                 target="_blank">
 
-                <div class=" shadow-2xl rounded-2xl cursor-pointer overflow-hidden group ">
+                <div class="shadow-2xl rounded-2xl cursor-pointer overflow-hidden group bg-white dark:bg-gray-800">
                     <div class="h-64 overflow-hidden">
                         <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/780450123.jpg?k=95dc2c80fa0724467e501081c0ab1d7d8af633da1de2a2192aa56d9b5c612757&o="
                             alt="Gecko Guesthouse"
@@ -488,7 +484,7 @@
                             <h1 class="text-[18px] font-bold">$12 total</h1>
                         </div>
                         <div>
-                            <h1 class="text-[13px] text-gray-600">Total with taxes and fees</h1>
+                            <h1 class="text-[13px] text-gray-600 dark:text-gray-400">Total with taxes and fees</h1>
                         </div>
                         <div class="flex gap-1">
 
@@ -517,10 +513,10 @@
                 </div>
             </a>
             <!-- card 7 -->
-            <a href="https://www.booking.com/hotel/kh/ankounamatata-koh-rong.html?aid=340295&label=metatrivago-hotel-4619744_xqdz-def_los-1_nrm-1_gstadt-2_gstkid-0_curr-usd_lang-en-us_mcid-50_dev-dsk_losb-1_bw-23_bwb-15_pg-0_dd-0_gsb-2_sl-0_g-0_tstar-0_trat-0_tprc-0_tamnt-0_cod-1778143482_trvref-01ddd057-28f1-3e0f-8cf3-69a9005249b8_tamnt-0&sid=e9549b169602d7241b67937a562ad8e7&all_sr_blocks=1304897301_404004291_0_0_0%2C1304897301_404004291_0_0_0&checkin=2026-05-30&checkout=2026-05-31&dist=0&group_adults=2&group_children=0&hapos=9&highlighted_blocks=1304897301_404004291_0_0_0%2C1304897301_404004291_0_0_0&hpos=9&matching_block_id=1304897301_404004291_0_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=distance_from_search&sr_pri_blocks=1304897301_404004291_0_0_0__800%2C1304897301_404004291_0_0_0__800&srepoch=1778212062&srpvid=ac5a1818e5f900ca&type=total&ucfs=1&"
+            <a href="https://www.booking.com/hotel/kh/ankounamatata-koh-rong.html?aid=340295&label=metatrivago-hotel-4619744_xqdz-def_los-1_nrm-1_gstadt-2_gstkid-0_curr-usd_lang-en-us_mcid-50_dev-dsk_losb-1_bw-23_bwb-15_pg-0_dd-0_gsb-2_sl-0_g-0_tstar-0_trat-0_tprc-0_tamnt-0_cod-1778143482_trvref-01ddd057-28f1-3e0f-8cf3-69a9005249b8_tamnt-0&sid=8a7d86e5f789665f355abd694831e370&all_sr_blocks=1304897301_404004291_0_0_0%2C1304897301_404004291_0_0_0&checkin=2026-05-30&checkout=2026-05-31&dest_id=900051798&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1304897301_404004291_0_0_0%2C1304897301_404004291_0_0_0&hpos=1&matching_block_id=1304897301_404004291_0_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1304897301_404004291_0_0_0__800%2C1304897301_404004291_0_0_0__800&srepoch=1778326687&srpvid=72b251cc33e8038e&type=total&ucfs=1&"
                 target="_blank">
 
-                <div class=" shadow-2xl rounded-2xl cursor-pointer overflow-hidden group ">
+                <div class="shadow-2xl rounded-2xl cursor-pointer overflow-hidden group bg-white dark:bg-gray-800">
 
                     <div class="h-64 overflow-hidden">
                         <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/610874443.jpg?k=19a74a6451e961b3fc92c0c9ae5c24cdbc7cb4930d3ac7bd8d7b4776f8153c6d&o="
@@ -548,7 +544,7 @@
                             <h1 class="text-[18px] font-bold">$8 total</h1>
                         </div>
                         <div>
-                            <h1 class="text-[13px] text-gray-600">Total with taxes and fees</h1>
+                            <h1 class="text-[13px] text-gray-600 dark:text-gray-400">Total with taxes and fees</h1>
                         </div>
                         <div class="flex gap-1">
 
@@ -586,7 +582,7 @@
             <a href="https://www.booking.com/hotel/kh/paradiso-village-center-bungalows.html?aid=340295&label=metatrivago-hotel-4619744_xqdz-def_los-1_nrm-1_gstadt-2_gstkid-0_curr-usd_lang-en-us_mcid-50_dev-dsk_losb-1_bw-23_bwb-15_pg-0_dd-0_gsb-2_sl-0_g-0_tstar-0_trat-0_tprc-0_tamnt-0_cod-1778143482_trvref-01ddd057-28f1-3e0f-8cf3-69a9005249b8_tamnt-0&sid=e9549b169602d7241b67937a562ad8e7&all_sr_blocks=1546053001_425885996_0_0_0&checkin=2026-05-30&checkout=2026-05-31&dist=0&group_adults=2&group_children=0&hapos=4&highlighted_blocks=1546053001_425885996_0_0_0&hpos=4&matching_block_id=1546053001_425885996_0_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=distance_from_search&sr_pri_blocks=1546053001_425885996_0_0_0__3600&srepoch=1778212254&srpvid=ac5a1818e5f900ca&type=total&ucfs=1&"
                 target="_blank">
 
-                <div class=" shadow-2xl rounded-2xl cursor-pointer overflow-hidden group ">
+                <div class="shadow-2xl rounded-2xl cursor-pointer overflow-hidden group bg-white dark:bg-gray-800">
 
                     <div class="h-64 overflow-hidden">
                         <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/863615214.jpg?k=02cc01ccaf82826b0640c6110bb8fc9fd9971c89667d849c3a1503cc84e9ef7a&o="
@@ -614,7 +610,7 @@
                             <h1 class="text-[18px] font-bold">$36 total</h1>
                         </div>
                         <div>
-                            <h1 class="text-[13px] text-gray-600">Total with taxes and fees</h1>
+                            <h1 class="text-[13px] text-gray-600 dark:text-gray-400">Total with taxes and fees</h1>
                         </div>
                         <div class="flex gap-1">
 
@@ -812,6 +808,190 @@
         </div>
     </footer>
 
+<script>
+                            const modal = document.getElementById('signupModal');
+
+                            // Toggle Modal visibility
+                            function toggleModal() {
+                                if (modal.classList.contains('hidden')) {
+                                    modal.classList.remove('hidden');
+                                    modal.classList.add('flex');
+                                } else {
+                                    modal.classList.add('hidden');
+                                    modal.classList.remove('flex');
+                                }
+                            }
+
+                            // Handle Hotel Booking Selection
+                            function bookHotel(hotelName) {
+                                const info = document.getElementById('bookingInfo');
+                                info.innerText = "Selected: " + hotelName;
+                                info.classList.remove('italic', 'text-gray-600');
+                                info.classList.add('font-bold', 'text-blue-700');
+                            }
+
+                            // Handle Signup
+                            function signupUser() {
+                                const name = document.getElementById('name').value;
+                                if (name.trim() !== "") {
+                                    alert("Registration successful for " + name);
+                                    toggleModal();
+                                } else {
+                                    alert("Please enter your name.");
+                                }
+                            }
+
+                            // Close modal when clicking outside of it
+                            window.onclick = function (event) {
+                                if (event.target == modal) {
+                                    toggleModal();
+                                }
+                            }
+
+                // JavaScript for HOTELS SEARCH
+
+             // JavaScript for HOTELS SEARCH
+
+                            document.addEventListener('DOMContentLoaded', () => {
+    const hotelDatabase = [
+        { 
+            name: "The Royal Sands Koh Rong", 
+            url: "https://www.booking.com/hotel/kh/the-royal-sands-koh-rong-koh-rong-island.html" 
+        },
+        { 
+            name: "Long Set Resort", 
+            url: "https://www.booking.com/hotel/kh/long-set-resort-koh-rong-island.html" 
+        },
+        { 
+            name: "Apsara Resort Koh Rong", 
+            url: "https://www.booking.com/hotel/kh/apsara-resort-koh-rong.html" 
+        },
+        { 
+            name: "Anaya Koh Rong", 
+            url: "https://www.booking.com/hotel/kh/anaya-koh-rong.html" 
+        },
+        { 
+            name: "Sok San Beach Resort", 
+            url: "https://www.booking.com/hotel/kh/sok-san-beach-resort.html" 
+        },
+        { 
+            name: "The One Beach Resort", 
+            url: "https://www.booking.com/hotel/kh/sweet-dreams-koh-rong.html" 
+        },
+        
+        // SEARCH RESULTS IN HOT DEALS
+
+        { 
+            name: "Koh Rong Hill Beach Resort", 
+            url: "https://www.expedia.com/Sihanoukville-Hotels-Koh-Rong-Hill-Beach-Resort.h21469844.Hotel-Information?chkin=2026-04-17&chkout=2026-04-18&x_pwa=1&rfrr=HSR&pwa_ts=1775469286727&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=6191569&destination=Koh+Rong%2C+Preah+Sihanouk%2C+Cambodia&destType=MARKET&latLong=10.72909%2C103.231725&sort=RECOMMENDED&top_dp=74&top_cur=USD&semcid=US.UB.GOOGLE.DT-c-EN.HOTEL&semdtl=a114081197409.b1128090451569.g1kwd-27394997028.e1c.m1Cj0KCQjwp7jOBhDGARIsABe7C4ckTyVHP9JFxaSxsN2nzRvufZG7JEbEeVcHSPxh0EX0XrJT6DRYqb4aAr__EALw_wcB.r16791a3bc543a89c0211d04dba8096df3d2eda17580c6f48eb61d9d89d12e34c4.c1.j19198350.k1.d1536482555673.h1e.i1.l1.n1.o1.p1.q1.s1koh+rong+hotels.t1.x1.f1.u1.v1.w1&userIntent=&selectedRoomType=325923902&selectedRatePlan=399631267&categorySearch=any_option&searchId=0ee78535-fe83-4bea-8c03-0d99a38c956c" },
+        { 
+            name: "Royal C Beach Resort", 
+            url: "https://www.expedia.com/Koh-Rong-Hotels-Royal-C-Beach-Resort.h124040968.Hotel-Information?chkin=2026-05-15&chkout=2026-05-16&x_pwa=1&rfrr=HSR&pwa_ts=1778202258236&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=6191569&destination=Koh+Rong%2C+Preah+Sihanouk%2C+Cambodia&destType=MARKET&selected=124040968&latLong=10.72909%2C103.231725&sort=RECOMMENDED&top_dp=96&top_cur=USD&userIntent=&selectedRoomType=327852615&selectedRatePlan=406535552&categorySearch=any_option&searchId=4cf61487-3905-4129-9a0d-5319bb7e9dce" },
+        { 
+            name: "White Sand Ark Resort", 
+            url: "https://www.booking.com/hotel/kh/white-sand-ark-resort.html?aid=340295&label=metatrivago-hotel-4619744_xqdz-def_los-1_nrm-1_gstadt-2_gstkid-0_curr-usd_lang-en-us_mcid-50_dev-dsk_losb-1_bw-23_bwb-15_pg-0_dd-0_gsb-2_sl-0_g-0_tstar-0_trat-0_tprc-0_tamnt-0_cod-1778143482_trvref-01ddd057-28f1-3e0f-8cf3-69a9005249b8_tamnt-0&sid=8a7d86e5f789665f355abd694831e370&age=0&all_sr_blocks=899806409_0_2_1_0&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&group_children=0&hapos=1&highlighted_blocks=899806409_0_2_1_0&hpos=1&matching_block_id=899806409_0_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=distance_from_search&sr_pri_blocks=899806409_0_2_1_0__9334&srepoch=1778202394&srpvid=98f907c91f9a0823&type=total&ucfs=1&" },
+        { 
+            name: "Golden Beach Resort", 
+            url: "https://accommodation.edreams.net/Koh-Rong-Hotels-Golden-Beach-Resort.h105631038.Hotel-Information?chkin=2026-05-30&chkout=2026-05-31&x_pwa=1&rfrr=HSR&pwa_ts=1778202451363&referrerUrl=aHR0cHM6Ly9hY2NvbW1vZGF0aW9uLmVkcmVhbXMubmV0L0hvdGVsLVNlYXJjaA%3D%3D&rffrid=h4p.hcom.US.odigeo.000.000.kwrd%3Db1e9e54c-e651-3ef8-bc4c-28de5448d43e&useRewards=false&rm1=a2&regionId=6191569&destination=Koh+Rong%2C+Preah+Sihanouk%2C+Cambodia&destType=MARKET&selected=105631038&latLong=10.72909%2C103.231725&mpo=EC&sort=RECOMMENDED&top_dp=129&top_cur=USD&mctc=10&userIntent=&selectedRoomType=324874023&selectedRatePlan=396067283&searchId=bec47807-e158-4338-a50a-cdebcaaf4347" },
+        { 
+            name: "Sabay Koh Rong", 
+            url: "https://www.booking.com/hotel/kh/sabay-koh-rong.html" },
+        { 
+            name: "Gecko Guesthouse", 
+            url: "https://www.booking.com/hotel/kh/gecko-guesthouse.html?aid=340295&label=metatrivago-hotel-4619744_xqdz-def_los-1_nrm-1_gstadt-2_gstkid-0_curr-usd_lang-en-us_mcid-50_dev-dsk_losb-1_bw-23_bwb-15_pg-0_dd-0_gsb-2_sl-0_g-0_tstar-0_trat-0_tprc-0_tamnt-0_cod-1778143482_trvref-01ddd057-28f1-3e0f-8cf3-69a9005249b8_tamnt-0&sid=8a7d86e5f789665f355abd694831e370&age=0&all_sr_blocks=1530942401_424620090_2_0_0&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&group_children=0&hapos=8&highlighted_blocks=1530942401_424620090_2_0_0&hpos=8&matching_block_id=1530942401_424620090_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=distance_from_search&sr_pri_blocks=1530942401_424620090_2_0_0__1116&srepoch=1778211489&srpvid=ac5a1818e5f900ca&type=total&ucfs=1&" },
+        { 
+            name: "Ankounamatata", 
+            url: "https://www.booking.com/hotel/kh/ankounamatata-koh-rong.html?aid=340295&label=metatrivago-hotel-4619744_xqdz-def_los-1_nrm-1_gstadt-2_gstkid-0_curr-usd_lang-en-us_mcid-50_dev-dsk_losb-1_bw-23_bwb-15_pg-0_dd-0_gsb-2_sl-0_g-0_tstar-0_trat-0_tprc-0_tamnt-0_cod-1778143482_trvref-01ddd057-28f1-3e0f-8cf3-69a9005249b8_tamnt-0&sid=8a7d86e5f789665f355abd694831e370&all_sr_blocks=1304897301_404004291_0_0_0%2C1304897301_404004291_0_0_0&checkin=2026-05-30&checkout=2026-05-31&dest_id=900051798&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1304897301_404004291_0_0_0%2C1304897301_404004291_0_0_0&hpos=1&matching_block_id=1304897301_404004291_0_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1304897301_404004291_0_0_0__800%2C1304897301_404004291_0_0_0__800&srepoch=1778326687&srpvid=72b251cc33e8038e&type=total&ucfs=1&" },
+        { 
+            name: "Cabanas - Village Center", 
+            url: "https://www.booking.com/hotel/kh/paradiso-village-center-bungalows.html?aid=340295&label=metatrivago-hotel-4619744_xqdz-def_los-1_nrm-1_gstadt-2_gstkid-0_curr-usd_lang-en-us_mcid-50_dev-dsk_losb-1_bw-23_bwb-15_pg-0_dd-0_gsb-2_sl-0_g-0_tstar-0_trat-0_tprc-0_tamnt-0_cod-1778143482_trvref-01ddd057-28f1-3e0f-8cf3-69a9005249b8_tamnt-0&sid=8a7d86e5f789665f355abd694831e370&all_sr_blocks=1546053001_425885996_0_0_0&checkin=2026-05-30&checkout=2026-05-31&group_adults=2&group_children=0&hapos=4&highlighted_blocks=1546053001_425885996_0_0_0&hpos=4&matching_block_id=1546053001_425885996_0_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=distance_from_search&sr_pri_blocks=1546053001_425885996_0_0_0__3600&srepoch=1778212254&srpvid=ac5a1818e5f900ca&type=total&ucfs=1&" }
+    ];
+
+    const searchInput = document.getElementById('hotelSearchInput');
+    const dropdown = document.getElementById('suggestionDropdown');
+
+    if (searchInput && dropdown) {
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase().trim();
+            dropdown.innerHTML = ''; 
+
+            if (query.length > 0) {
+                const matches = hotelDatabase.filter(h => h.name.toLowerCase().includes(query));
+
+                if (matches.length > 0) {
+                    dropdown.classList.remove('hidden');
+                    dropdown.style.display = 'block'; 
+
+                    matches.forEach(match => {
+                        const li = document.createElement('li');
+                        li.className = "px-4 py-3 hover:bg-gray-100 cursor-pointer text-sm text-black border-b last:border-none bg-white block w-full";
+                        li.textContent = match.name;
+                        
+                        li.onmousedown = (e) => {
+                            e.preventDefault(); 
+                            searchInput.value = match.name;
+
+                            // DIRECT ACTION: Always open the link in a new tab
+                            if (match.url && match.url !== "#") {
+                                window.open(match.url, '_blank');
+                            }
+
+                            dropdown.classList.add('hidden');
+                            dropdown.style.display = 'none';
+                        };
+                        
+                        dropdown.appendChild(li);
+                    });
+                } else {
+                    dropdown.style.display = 'none';
+                }
+            } else {
+                dropdown.style.display = 'none';
+            }
+        });
+        
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+    }
+});
+
+                        </script>
+
+
+    <script>
+    // DarkMode & LightMode Toggle
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const darkIcon = document.getElementById("theme-toggle-dark-icon");
+    const lightIcon = document.getElementById("theme-toggle-light-icon");
+
+    // Apply saved theme or system preference on load
+    if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+        lightIcon.classList.remove("hidden");
+        darkIcon.classList.add("hidden");
+    } else {
+        document.documentElement.classList.remove("dark");
+        darkIcon.classList.remove("hidden");
+        lightIcon.classList.add("hidden");
+    }
+
+    // Toggle on button click
+    themeToggleBtn.addEventListener("click", function() {
+        document.documentElement.classList.toggle("dark");
+        if (document.documentElement.classList.contains("dark")) {
+            localStorage.setItem("color-theme", "dark");
+            lightIcon.classList.remove("hidden");
+            darkIcon.classList.add("hidden");
+        } else {
+            localStorage.setItem("color-theme", "light");
+            darkIcon.classList.remove("hidden");
+            lightIcon.classList.add("hidden");
+        }
+    });
+    </script>
 </body>
 
 </html>

@@ -10,15 +10,15 @@
   <body>
 
     <!-- navigation -->
-    <nav>
+    <nav class="bg-white dark:bg-gray-900 border-b border-transparent dark:border-gray-700">
         <div class="my-1 py-3 ">
             <div>
                 <div class="flex mx-40 justify-between">
 
                     <div>
                         <a href="./index.html">
-                            <h1 class="font-extrabold text-4xl text-blue-800 underline ">
-                                TourWithUs
+                            <h1 class="font-extrabold text-5xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-600 to-cyan-400 drop-shadow-sm">
+                                 TourWithUs
                             </h1>
                         </a>
 
@@ -60,6 +60,13 @@
                                 </svg>Sign up
                             </button>
                         </div>
+                          <!-- DarkMode&LightMode Toggle -->
+                    <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all">
+                    <span id="theme-toggle-dark-icon" class="text-xl">🌙</span>
+                    <span id="theme-toggle-light-icon" class="hidden text-xl">☀️</span>
+                </button>
+                    </div>
                         <!-- Signup Modal -->
                         <div id="signupModal"
                             class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-[100]">
@@ -519,5 +526,36 @@
         class="orb absolute w-64 h-64 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 filter blur-3xl pointer-events-none"
       ></div>
     </footer>
-  </body>
+      <script>
+    // DarkMode & LightMode Toggle
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const darkIcon = document.getElementById("theme-toggle-dark-icon");
+    const lightIcon = document.getElementById("theme-toggle-light-icon");
+
+    // Apply saved theme or system preference on load
+    if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+        lightIcon.classList.remove("hidden");
+        darkIcon.classList.add("hidden");
+    } else {
+        document.documentElement.classList.remove("dark");
+        darkIcon.classList.remove("hidden");
+        lightIcon.classList.add("hidden");
+    }
+
+    // Toggle on button click
+    themeToggleBtn.addEventListener("click", function() {
+        document.documentElement.classList.toggle("dark");
+        if (document.documentElement.classList.contains("dark")) {
+            localStorage.setItem("color-theme", "dark");
+            lightIcon.classList.remove("hidden");
+            darkIcon.classList.add("hidden");
+        } else {
+            localStorage.setItem("color-theme", "light");
+            darkIcon.classList.remove("hidden");
+            lightIcon.classList.add("hidden");
+        }
+    });
+    </script>
+</body>
 </html>

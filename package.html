@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
   </head>
-  <body>
+  <body class="bg-white dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
     <!-- navigation -->
     <nav class="bg-white dark:bg-gray-900 border-b border-transparent dark:border-gray-700">
@@ -28,16 +28,16 @@
 
                         <div class="hidden md:flex md:items-center md:justify-center md:gap-5 ">
 
-                            <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium  transition-all duration-400 hover:bg-black hover:text-white"
+                            <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium transition-all duration-400 hover:bg-black hover:text-white dark:text-gray-200 dark:hover:bg-gray-700"
                                 href="./hotdeals.html">Hot deals</a>
-                            <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium  transition-all duration-400 hover:bg-black hover:text-white"
+                            <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium transition-all duration-400 hover:bg-black hover:text-white dark:text-gray-200 dark:hover:bg-gray-700"
                                 href="./contactus.html">Contact</a>
-                            <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium  transition-all duration-400 hover:bg-black hover:text-white"
+                            <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium transition-all duration-400 hover:bg-black hover:text-white dark:text-gray-200 dark:hover:bg-gray-700"
                                 href="./aboutus.html">About</a>
 
                         </div>
 
-                        <a class="hidden items-center justify-center rounded-xl bg-white text-sm px-4 py-2 gap-1 font-semibold shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-black hover:text-white sm:inline-flex group"
+                        <a class="hidden items-center justify-center rounded-xl bg-white dark:bg-gray-800 dark:text-gray-100 dark:ring-gray-600 text-sm px-4 py-2 gap-1 font-semibold shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-black hover:text-white sm:inline-flex group"
                             href="./booknow.html" aria-label="booknow">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20px"
                                 class="fill-black transition-colors duration-150 group-hover:fill-white">
@@ -49,7 +49,7 @@
 
                         <!-- Sign up -->
                         <div id="navAction"
-                            class=" justify-center rounded-xl bg-white text-sm px-4 py-2 font-semibold shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-black hover:text-white sm:inline-flex group">
+                            class=" justify-center rounded-xl bg-white dark:bg-gray-800 dark:text-gray-100 dark:ring-gray-600 text-sm px-4 py-2 font-semibold shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-black hover:text-white sm:inline-flex group">
                             <!-- Sign Up Button -->
 
                             <button onclick="toggleModal()" class="flex gap-1 cursor-pointer">
@@ -158,7 +158,7 @@
      <!-- Package details 1 -->
     <section class="container   mx-auto p-5 md:p-10 antialiased">
       <article
-        class="overflow-hidden border border-gray-200 rounded-xl flex flex-wrap md:flex-nowrap shadow-md mx-auto max-w-4xl bg-white"
+        class="overflow-hidden border border-gray-200 dark:border-gray-700 rounded-xl flex flex-wrap md:flex-nowrap shadow-md mx-auto max-w-4xl bg-white dark:bg-gray-800"
       >
         <!-- Left: Image Section -->
         <div class="w-full md:w-80 shrink-0">
@@ -173,7 +173,7 @@
         <div class="flex flex-col w-full">
           <!-- Top: Title and Package Details -->
           <div class="p-6">
-            <h1 class="text-2xl font-bold text-blue-800 mb-6">
+            <h1 class="text-2xl font-bold text-blue-800 dark:text-blue-300 mb-6">
                <strong>The One Resort</strong> – Romance Package
             </h1>
 
@@ -204,13 +204,13 @@
 
           <!-- Bottom: Reviews, Stars, and Pricing -->
           <div
-            class="p-6 mt-auto border-t border-gray-100 bg-blue-50 flex flex-col sm:flex-row justify-between items-end sm:items-center"
+            class="p-6 mt-auto border-t border-gray-100 dark:border-gray-700 bg-blue-50 dark:bg-gray-700 flex flex-col sm:flex-row justify-between items-end sm:items-center"
           >
             <!-- Reviews and Stars (Stars moved to bottom) -->
             <div class="flex flex-col mb-4 sm:mb-0">
-              <div class="text-sm font-bold text-gray-800">
+              <div class="text-sm font-bold text-gray-800 dark:text-gray-200">
                 8.8  Fabulous 
-                <span class="font-normal text-gray-500 ml-1"
+                <span class="font-normal text-gray-500 dark:text-gray-400 ml-1"
                   >• 568 reviews</span
                 >
               </div>
@@ -248,7 +248,7 @@
     <!-- Package details 2 -->
     <section class="container mx-auto p-5 md:p-10 antialiased">
       <article
-        class="overflow-hidden border border-gray-200 rounded-xl flex flex-wrap md:flex-nowrap shadow-md mx-auto max-w-4xl bg-white"
+        class="overflow-hidden border border-gray-200 dark:border-gray-700 rounded-xl flex flex-wrap md:flex-nowrap shadow-md mx-auto max-w-4xl bg-white dark:bg-gray-800"
       >
         <!-- Left: Image Section -->
         <div class="w-full md:w-80 shrink-0">
@@ -263,7 +263,7 @@
         <div class="flex flex-col w-full">
           <!-- Top: Title and Package Details -->
           <div class="p-6">
-            <h1 class="text-2xl font-bold text-blue-800 mb-6">
+            <h1 class="text-2xl font-bold text-blue-800 dark:text-blue-300 mb-6">
                <strong>The Royal Sand Koh Rong</strong> –  Sea Package
             </h1>
 
@@ -295,13 +295,13 @@
 
           <!-- Bottom: Reviews, Stars, and Pricing -->
           <div
-            class="p-6 mt-auto border-t border-gray-100 bg-blue-50 flex flex-col sm:flex-row justify-between items-end sm:items-center"
+            class="p-6 mt-auto border-t border-gray-100 dark:border-gray-700 bg-blue-50 dark:bg-gray-700 flex flex-col sm:flex-row justify-between items-end sm:items-center"
           >
             <!-- Reviews and Stars (Stars moved to bottom) -->
             <div class="flex flex-col mb-4 sm:mb-0">
-              <div class="text-sm font-bold text-gray-800">
+              <div class="text-sm font-bold text-gray-800 dark:text-gray-200">
                 9.4 Excellent
-                <span class="font-normal text-gray-500 ml-1"
+                <span class="font-normal text-gray-500 dark:text-gray-400 ml-1"
                   >• 894 reviews</span
                 >
               </div>
@@ -339,7 +339,7 @@
     <!-- Package details 3 -->
     <section class="container mx-auto p-5 md:p-10 antialiased">
       <article
-        class="overflow-hidden border border-gray-200 rounded-xl flex flex-wrap md:flex-nowrap shadow-md mx-auto max-w-4xl bg-white"
+        class="overflow-hidden border border-gray-200 dark:border-gray-700 rounded-xl flex flex-wrap md:flex-nowrap shadow-md mx-auto max-w-4xl bg-white dark:bg-gray-800"
       >
         <!-- Left: Image Section -->
         <div class="w-full md:w-80 shrink-0">
@@ -354,7 +354,7 @@
         <div class="flex flex-col w-full">
           <!-- Top: Title and Package Details -->
           <div class="p-6">
-            <h1 class="text-2xl font-bold text-blue-800 mb-6">
+            <h1 class="text-2xl font-bold text-blue-800 dark:text-blue-300 mb-6">
                The Royal Sand Koh Rong – Energy Package
             </h1>
 
@@ -381,13 +381,13 @@ Sok San & Kong Kang Cycling Tour – A guided ride showcasing island views and l
 
           <!-- Bottom: Reviews, Stars, and Pricing -->
           <div
-            class="p-6 mt-auto border-t border-gray-100 bg-blue-50 flex flex-col sm:flex-row justify-between items-end sm:items-center"
+            class="p-6 mt-auto border-t border-gray-100 dark:border-gray-700 bg-blue-50 dark:bg-gray-700 flex flex-col sm:flex-row justify-between items-end sm:items-center"
           >
             <!-- Reviews and Stars (Stars moved to bottom) -->
             <div class="flex flex-col mb-4 sm:mb-0">
-              <div class="text-sm font-bold text-gray-800">
+              <div class="text-sm font-bold text-gray-800 dark:text-gray-200">
                 9.4 Excellent
-                <span class="font-normal text-gray-500 ml-1"
+                <span class="font-normal text-gray-500 dark:text-gray-400 ml-1"
                   >• 1124 reviews</span
                 >
               </div>

@@ -41,12 +41,12 @@
 
             <!-- Sign up -->
             <div id="navAction"
-              class=" justify-center rounded-xl bg-white text-sm px-4 py-2 font-semibold shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-black hover:text-white sm:inline-flex group">
+              class=" justify-center rounded-xl bg-white dark:bg-gray-800 dark:text-white dark:ring-gray-600 text-sm px-4 py-2 font-semibold shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-black hover:text-white dark:hover:bg-gray-600 sm:inline-flex group">
               <!-- Sign Up Button -->
 
               <button onclick="toggleModal()" class="flex gap-1 cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20px"
-                  class="fill-black transition-colors duration-150 group-hover:fill-white"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  class="fill-black dark:fill-white transition-colors duration-150 group-hover:fill-white"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                   <path
                     d="M285.7 368C384.2 368 464 447.8 464 546.3C464 562.7 450.7 576 434.3 576L77.7 576C61.3 576 48 562.7 48 546.3C48 447.8 127.8 368 226.3 368L285.7 368zM528 144C541.3 144 552 154.7 552 168L552 216L600 216C613.3 216 624 226.7 624 240C624 253.3 613.3 264 600 264L552 264L552 312C552 325.3 541.3 336 528 336C514.7 336 504 325.3 504 312L504 264L456 264C442.7 264 432 253.3 432 240C432 226.7 442.7 216 456 216L504 216L504 168C504 154.7 514.7 144 528 144zM256 312C189.7 312 136 258.3 136 192C136 125.7 189.7 72 256 72C322.3 72 376 125.7 376 192C376 258.3 322.3 312 256 312z" />
                 </svg>Sign up
@@ -63,21 +63,21 @@
             <div id="signupModal"
               class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-[100]">
               <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl w-11/12 sm:w-96 shadow-2xl">
-                <h2 class="text-2xl font-bold mb-2">Join TourWithus</h2>
-                <p class="text-sm text-gray-500 mb-6">Create an account to manage your bookings.</p>
+                <h2 class="text-2xl font-bold mb-2 dark:text-white">Join TourWithus</h2>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Create an account to manage your bookings.</p>
                 <div class="space-y-4">
                   <input id="name" type="text" placeholder="Full Name"
-                    class="border p-3 w-full rounded-lg outline-blue-500">
+                    class="border p-3 w-full rounded-lg outline-blue-500 bg-white dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-400">
                   <input id="email" type="email" placeholder="Email"
-                    class="border p-3 w-full rounded-lg outline-blue-500">
+                    class="border p-3 w-full rounded-lg outline-blue-500 bg-white dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-400">
                   <input id="password" type="password" placeholder="Password"
-                    class="border p-3 w-full rounded-lg outline-blue-500">
+                    class="border p-3 w-full rounded-lg outline-blue-500 bg-white dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-400">
                   <button onclick="signupUser()"
                     class="bg-blue-600 hover:bg-blue-700 text-white w-full py-3 rounded-lg font-bold transition cursor-pointer">
                     Create Account
                   </button>
                   <button onclick="toggleModal()"
-                    class="text-sm text-gray-400 hover:text-gray-600 w-full text-center cursor-pointer">
+                    class="text-sm text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 w-full text-center cursor-pointer">
                     Maybe later
                   </button>
                 </div>
@@ -146,7 +146,7 @@
 
       <h2 class="text-2xl font-bold mb-4">Select Your Hotels</h2>
       <!-- search -->
-      <div class=" bg-white shadow-md rounded-lg mt-10 ">
+      <div class=" bg-white dark:bg-gray-800 shadow-md rounded-lg mt-10 ">
         <!-- Destination -->
         <div class="flex items-center px-4 py-3">
           <svg class="w-5 h-5 text-gray-500 mr-2" fill="none" stroke="currentColor" stroke-width="2"
@@ -155,7 +155,7 @@
               d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
           </svg>
           <div>
-            <p class="text-sm text-gray-500">Hotels</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Hotels</p>
           </div>
         </div>
       </div>
@@ -169,9 +169,9 @@
 
       <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow grid gap-4">
 
-        <input type="text" placeholder="Full Name" class="border p-3 rounded">
-        <input type="email" placeholder="Email Address" class="border p-3 rounded">
-        <input type="tel" placeholder="Phone Number" class="border p-3 rounded">
+        <input type="text" placeholder="Full Name" class="border p-3 rounded bg-white dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-400">
+        <input type="email" placeholder="Email Address" class="border p-3 rounded bg-white dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-400">
+        <input type="tel" placeholder="Phone Number" class="border p-3 rounded bg-white dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-400">
 
         <div class="flex justify-between mt-4">
           <button class="bg-gray-300 px-4 py-2 rounded cursor-pointer">Back</button>
@@ -188,18 +188,18 @@
       <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
 
         <div class="flex justify-between mb-3">
-          <p>Room Type:</p>
-          <p class="font-bold">...</p>
+          <p class="dark:text-gray-300">Room Type:</p>
+          <p class="font-bold dark:text-white">...</p>
         </div>
 
         <div class="flex justify-between mb-3">
-          <p>Dates:</p>
-          <p class="font-bold">...</p>
+          <p class="dark:text-gray-300">Dates:</p>
+          <p class="font-bold dark:text-white">...</p>
         </div>
 
         <div class="flex justify-between mb-3">
-          <p>Total Price:</p>
-          <p class="font-bold text-blue-900">...</p>
+          <p class="dark:text-gray-300">Total Price:</p>
+          <p class="font-bold text-blue-900 dark:text-blue-400">...</p>
         </div>
 
         <div class="border-t pt-4 flex justify-between ">
